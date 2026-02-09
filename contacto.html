@@ -1,0 +1,359 @@
+<!DOCTYPE html>
+<html lang="es">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Contacto | Lorena Coronado</title>
+
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.1/css/all.min.css">
+    <link rel="icon" href="assets/image/favicon.png" type="image/png">
+    <link rel="stylesheet" href="style.css">
+    <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@300;600;700&display=swap" rel="stylesheet">
+
+    <style>
+        /* ============================================================
+            FONDO Y CONTENEDOR PRINCIPAL
+            ============================================================ */
+        .contact-page-wrapper {
+            min-height: 100vh;
+            /* Ocupa todo el alto de la pantalla */
+            display: flex;
+            align-items: center;
+            /* Centra la tarjeta verticalmente */
+            justify-content: center;
+            /* Centra la tarjeta horizontalmente */
+            background: linear-gradient(135deg, #f5f7fa 0%, #d6eef1 100%);
+            /* Fondo degradado */
+            padding: 20px;
+        }
+
+        /* ============================================================
+            LA TARJETA "CONTACTO" (Caja blanca)
+            ============================================================ */
+        .premium-card {
+            position: relative;
+            max-width: 1150px;
+            /* <--- REDUCIDO: Antes 1400px para que sea más pequeña */
+            min-height: 500px;
+            /* <--- AJUSTADO: Antes 520px para encoger el contenedor */
+            background: rgba(255, 255, 255, 0.95);
+            /* Color blanco con ligera transparencia */
+            border-radius: 40px;
+            /* Esquinas redondeadas */
+            display: grid;
+            grid-template-columns: 1fr 1.1fr;
+            /* Divide la tarjeta en dos columnas */
+            /* IMPORTANTE: Quitamos overflow:hidden para que el enlace de arriba NO se corte */
+            box-shadow: 0 30px 60px rgba(0, 0, 0, 0.12);
+            /* Sombra elegante */
+        }
+
+        /* ============================================================
+            LADO IZQUIERDO: LA IMAGEN 
+            ============================================================ */
+        .card-image-side {
+            background-color: #179fb1;
+            /* Color de fondo debajo de la imagen */
+            padding: 35px;
+            /* <--- AJUSTADO: Menos aire para que la imagen luzca más */
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            border-top-left-radius: 40px;
+            /* Redondeamos manualmente al quitar el overflow */
+            border-bottom-left-radius: 40px;
+        }
+
+        .card-image-side img {
+            width: 100%;
+            /* La imagen se adapta al ancho de su columna */
+            max-width: 480px;
+            /* Imagen más grande */
+            border-radius: 20px;
+            box-shadow: 0 0 40px 10px rgba(255, 255, 255, 1);
+            /* Brillo suave */
+            transition: 0.4s ease;
+        }
+
+        /* ============================================================
+            LADO DERECHO: INFORMACIÓN
+            ============================================================ */
+        .card-info-side {
+            padding: 30px 60px;
+            /* Espaciado interno: 30px arriba/abajo y 60px izquierda/derecha */
+            display: flex;
+            /* Activa el modo "imán" para organizar los elementos fácilmente */
+            flex-direction: column;
+            /* Alinea los elementos uno debajo de otro */
+            justify-content: center;
+            /* Centra todo el contenido verticalmente dentro de la columna */
+            position: relative;
+            /* Convierte esta caja en un "ancla" */
+        }
+
+        /* Botón "DISPONIBLE PARA TRABAJAR" */
+        .badge-status {
+            position: absolute;
+            /* <--- Clave para moverlo libremente */
+            top: 45px;
+            /* <--- AJUSTADO para el nuevo tamaño de caja */
+            right: 60px;
+            /* <--- Alineación con el margen derecho del padding */
+            display: inline-flex;
+            align-items: center;
+            gap: 6px;
+            background: #d2f6dc;
+            /* Fondo verde claro */
+            color: #1a5c37;
+            /* Texto verde oscuro */
+            padding: 4px 15px;
+            /* Tamaño de la cápsula */
+            border-radius: 50px;
+            font-size: 0.80rem;
+            /* Tamaño de letra */
+            font-weight: 700;
+            width: fit-content;
+            /* Se ajusta al texto */
+            border: 1px solid #1a5c37;
+        }
+
+        /* Título "¿Hablamos?" */
+        .contact-title {
+            margin-top: 15px;
+            font-size: 1.8rem;
+            font-weight: 700;
+            /* Máximo grosor de Poppins */
+            color: #333;
+            margin-bottom: 8px;
+            /* Bajar o subir el titulo */
+            line-height: 1.2;
+            padding-bottom: 4px;
+            background: linear-gradient(90deg, #333 0%, #00bcd4 100%);
+            /* Efecto degradado opcional */
+            -webkit-background-clip: text;
+            background-clip: text;
+            /* <--- Añadida línea de compatibilidad */
+            -webkit-text-fill-color: transparent;
+            color: transparent;
+        }
+
+        /* TEXTO DE INFORMACIÓN */
+        .card-info-side p:first-of-type {
+            margin-top: 20px; /* Bajar o subir el texto */
+            font-size: 0.90rem;
+            line-height: 1.5;
+            color: #2d2d2d;
+            margin-bottom: 15px;
+            text-align: justify;
+        }
+
+        .card-info-side p {
+            font-size: 0.90rem;
+            line-height: 1.5;
+            color: #2d2d2d;
+            margin-bottom: 15px;
+            text-align: justify;
+        }
+
+        /* Resalto de palabras clave color turquesa */
+        .card-info-side p strong {
+            color: #179fb1;
+            font-weight: 600;
+        }
+
+        /* Contenedor que separa el bloque de botones del texto superior */
+        .actions-wrapper {
+            margin-top: 25px;
+            /* <--- AUMENTADO: Antes 20px para bajar los botones */
+            display: flex;
+            flex-direction: column;
+            gap: 20px;
+            padding-bottom: 10px;
+            /* <--- AÑADIDO: Aire extra por abajo */
+        }
+
+        /* ============================================================
+            ESTILOS DE LOS BOTONES
+            ============================================================ */
+
+        /* Botón de ENVIAR CORREO */
+        .btn-main-contact {
+            background-color: #179fb1;
+            color: white;
+            padding: 8px 20px;
+            /* Un poco más alto */
+            text-align: center;
+            border-radius: 12px;
+            text-decoration: none;
+            font-weight: 700;
+            font-size: 1rem;
+            transition: 0.3s;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            gap: 10px;
+            white-space: nowrap;
+            /* Evita que el texto se rompa */
+            width: 100%;
+            /* Ocupa todo el ancho disponible */
+            box-sizing: border-box;
+            /* Asegura que el padding no lo ensanche más de la cuenta */
+        }
+
+        /* Botones de CV (uno al lado del otro) */
+        .cv-grid-downloads {
+            display: grid;
+            grid-template-columns: 1fr 1fr;
+            gap: 15px;
+        }
+
+        /* Botones de CURRICULUM */
+        .btn-cv-download {
+            border: 2px solid #179fb1;
+            color: #179fb1;
+            padding: 8px;
+            /* <--- AJUSTADO: Más aire interno */
+            text-align: center;
+            border-radius: 12px;
+            text-decoration: none;
+            font-size: 1rem;
+            font-weight: 600;
+            transition: 0.3s;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            gap: 8px;
+        }
+
+        /* Iconos PDF de los botones de CURRICULUM */
+        .btn-cv-download i {
+            font-size: 1.2rem;
+            /* Ajusta el tamaño */
+            vertical-align: middle;
+        }
+
+        /* ============================================================
+            EFECTOS HOVER (Al pasar el ratón)
+            ============================================================ */
+        .btn-main-contact:hover {
+            transform: translateY(-3px);
+            /* Sube un poco */
+            background: #00acc1;
+            /* Oscurece un poco el color */
+            box-shadow: 0 10px 20px rgba(0, 188, 212, 0.2);
+            /* Sombra turquesa */
+        }
+
+        .btn-cv-download:hover {
+            background-color: #f0fdfe;
+            /* Aparece un fondo muy claro */
+            transform: translateY(-2px);
+        }
+
+        /* Enlace de "Volver al portfolio" */
+        .back-link {
+            position: absolute;
+            top: -45px;
+            /* Lo sube a arriba */
+            right: 40px;
+            /* izquierda o derecha */
+            display: inline-flex;
+            align-items: center;
+            gap: 8px;
+            color: #635c5c;
+            text-decoration: none;
+            font-size: 1rem;
+            font-weight: 600;
+            transition: 0.3s;
+            z-index: 10;
+            /* Asegura que no quede tapado */
+        }
+
+        .back-link:hover {
+            color: #00bcd4;
+            transform: translateY(-3px);
+        }
+
+        /* ============================================================
+            RESPONSIVE (Para móviles)
+            ============================================================ */
+        @media (max-width: 768px) {
+            .premium-card {
+                grid-template-columns: 1fr;
+                /* Pone una columna sobre otra */
+            }
+
+            .contact-title {
+                font-size: 2.5rem;
+                /* Título más pequeño en móviles */
+            }
+
+            .btn-main-contact {
+                width: 100%;
+                /* En móvil el botón sí ocupa todo el ancho */
+            }
+
+            .back-link {
+                top: -35px;
+                right: 20px;
+            }
+        }
+    </style>
+</head>
+
+<body>
+
+    <div class="contact-page-wrapper">
+        <div class="premium-card">
+
+            <a href="index.html" class="back-link">
+                <i class="fas fa-arrow-left"></i> Volver al portfolio
+            </a>
+
+            <div class="card-image-side">
+                <img src="assets/image/daw_lorena.png" alt="Lorena Coronado">
+            </div>
+
+            <div class="card-info-side">
+                <div class="badge-status">
+                    <i class="fas fa-circle" style="font-size: 8px;"></i> Disponible para trabajar
+                </div>
+
+                <h1 class="contact-title">¿Hablamos?</h1>
+
+                <p>
+                    No solo estoy en camino de convertirme en desarrolladora; aporto un perfil curioso con años de
+                    experiencia en
+                    <strong>gestión y entornos internacionales</strong>. Esa trayectoria me ha enseñado a ser organizada
+                    y a resolver problemas antes de que aparezcan.
+                </p>
+                <p>
+                    Mi pasión por la <strong>fotografía y el diseño</strong> me permite ofrecer una mirada creativa
+                    única, fusionando la técnica del código con una sensibilidad visual cuidada. Aplico esta mentalidad
+                    para construir webs robustas, intuitivas y <strong>visualmente atractivas, aportando siempre mis
+                        ideas para mejorar el resultado final</strong>. ¿Te gustaría ver qué podemos crear juntos?
+                </p>
+
+                <div class="actions-wrapper">
+                    <a href="mailto:lorenayelamo.uk@gmail.com" class="btn-main-contact">
+                        <i class="fas fa-paper-plane"></i> Enviar Correo
+                    </a>
+
+                    <div class="cv-grid-downloads">
+                        <a href="assets/docs/CV_Lorenacoronado_DAW.pdf" target="_blank" class="btn-cv-download">
+                            <i class="fas fa-file-pdf"></i> CV Español
+                        </a>
+                        <a href="assets/docs/CV_Lorenacoronado_DAW_EN.pdf" target="_blank" class="btn-cv-download">
+                            <i class="fas fa-file-pdf"></i> CV English
+                        </a>
+                    </div>
+                </div>
+
+            </div>
+        </div>
+    </div>
+
+</body>
+
+</html>

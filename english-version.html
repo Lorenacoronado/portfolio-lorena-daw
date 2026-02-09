@@ -1,0 +1,180 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Lorena Coronado | Web Portfolio DAW</title>
+
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.1/css/all.min.css"
+        crossorigin="anonymous" referrerpolicy="no-referrer" />
+    <link rel="icon" href="assets/image/favicon.png" type="image/png">
+    <link rel="stylesheet" href="style.css">
+    <link
+        href="https://fonts.googleapis.com/css2?family=Poppins:wght@300;600;700&family=Roboto:wght@300;400;700&display=swap"
+        rel="stylesheet">
+
+    <style>
+        /* CAMBIOS PÁRRAFO INGLÉS */
+        /* Estilos específicos para la lista del About Me en inglés */
+        .about-section ul {
+            margin-top: 15px;
+            padding-left: 0;
+        }
+
+        .about-section ul li {
+            font-size: 1.05rem; /* Esto iguala el tamaño de los párrafos de arriba */
+            line-height: 1.6;
+            margin-bottom: 12px;
+            list-style: none;
+        }
+
+        .about-section ul li strong {
+            color: #179fb1; /* Esto pone las negritas en turquesa */
+        }
+
+        /* Arregla el interlineado del texto que rodea la foto */
+        .about-section p {
+            line-height: 1.8; /* Aumentamos un poco el espacio entre líneas */
+            margin-bottom: 20px;  /* Asegura un buen espacio entre párrafos */
+           
+        }
+    </style>
+</head>
+
+<body>
+
+    <header class="main-header">
+        <div class="header-icons">
+            <i class="fab fa-html5" title="HTML5"></i>
+            <i class="fab fa-css3-alt" title="CSS3"></i>
+            <i class="fab fa-js-square" title="JavaScript"></i>
+            <i class="fab fa-python" title="Python"></i>
+            <i class="fab fa-java" title="Java"></i>
+            <i class="fab fa-git-alt" title="Git"></i>
+        </div>
+
+        <nav class="main-nav">
+            <ul>
+                <li><a href="#about">About Me</a></li>
+                <li><a href="#projects">Projects</a></li>
+                <li><a href="contact-en.html">Contact</a></li>
+                <li id="language-switcher"><a href="index.html">ES</a></li>
+            </ul>
+        </nav>
+    </header>
+
+    <div class="content-wrapper">
+        <main>
+            <section class="hero-section">
+                <div class="hero-content">
+                    <h2>LORENA CORONADO</h2>
+                    <h1>DAW Student | Growing Full-Stack Developer</h1>
+                    <p>Turning ideas into web solutions.</p>
+                    <a href="#projects" class="cta-button">View Projects</a>
+                </div>
+
+                <div class="hero-image-container">
+                    <img src="assets/image/perfil-principal.png" alt="Main Image" class="hero-image">
+                    <div class="hero-social-links">
+                        <a href="https://www.linkedin.com/in/lorena-coronado" target="_blank">
+                            <i class="fab fa-linkedin"></i> LinkedIn
+                        </a>
+                        <a href="https://github.com/lorenacoronado" target="_blank">
+                            <i class="fab fa-github"></i> GitHub
+                        </a>
+                    </div>
+                </div>
+            </section>
+
+            <section id="about" class="about-section" style="display: block; overflow: hidden;">
+
+                <img src="assets/image/perfil_daw.png" alt="Lorena Coronado"
+                    style="float: left; width: 300px; height: auto; margin-right: 35px; margin-bottom: 15px; display: block; object-fit: contain;">
+
+                <h2>About Me</h2>
+
+                <p>
+                    I am a 2nd-year student of the Higher Vocational Training Cycle in <strong>Web Application
+                        Development (DAW)</strong>,
+                    with a clear goal: becoming a versatile and complete <strong>Full-Stack Developer</strong>. I am
+                    actively seeking my first professional experience to apply my knowledge and grow within the
+                    fascinating world of technology.
+                </p>
+
+                <p>
+                    My passion for IT is vocational and started at the age of 14, exploring web design and building my
+                    first computer.
+                    This curiosity led me to pursue a Middle Grade in Systems and Networks (SMR), which solidified my
+                    technical foundation and confirmed my path toward web development.
+                </p>
+
+                <p>
+                    What sets me apart is my <strong>adaptability and work ethic</strong>, forged in demanding
+                    international
+                    environments such as Amazon in London. Living and working abroad for three years has granted me a
+                    <strong>fluent and professional level of English</strong>, as well as the ability to manage teams
+                    and coordinate complex processes in cultural projects.
+                </p>
+
+                <p style="font-weight: bold; margin-top: 25px; clear: right;">My main focus areas are:</p>
+
+                <ul>
+                    <li>
+                        <strong>Frontend & UI/UX:</strong> Applying my extensive photography and design background to
+                        create
+                        intuitive, user-friendly, and aesthetic interfaces that enhance the final user experience.
+                    </li>
+                    <li>
+                        <strong>Backend & Logic:</strong> Highly interested in developing robust business logic and
+                        ensuring efficient data management (SQL) through clean and scalable code architectures.
+                    </li>
+                </ul>
+
+                <figure class="dev-quote-container" style="clear: both; margin-top: 40px;">
+                    <div class="quote-content-wrapper">
+                        <p class="dev-quote-preface">/* And remember... */</p>
+                        <blockquote>
+                            "If the code works, don't touch it."
+                        </blockquote>
+                    </div>
+                </figure>
+            </section>
+
+            <section id="projects" class="projects-section">
+                <h2>PROJECTS</h2>
+                <div class="projects-grid">
+                    <article class="project-card">
+                        <h3>01. Personal Web Portfolio</h3>
+                        <p>Developed using <strong>semantic HTML5</strong> and <strong>CSS3</strong>, focusing on
+                            <strong>Responsive Design</strong> and smooth interactivity.
+                        </p>
+                        <a href="https://github.com/Lorenacoronado/portafolio-lorena-daw" target="_blank"
+                            class="project-link">View Code (GitHub)</a>
+                    </article>
+
+                    <article class="project-card coming-soon">
+                        <h3>02. Project 2</h3>
+                        <p>Project under construction. (Coming soon...)</p>
+                    </article>
+
+                    <article class="project-card coming-soon">
+                        <h3>03. Project 3</h3>
+                        <p>Project under construction. (Coming soon...)</p>
+                    </article>
+                </div>
+            </section>
+        </main>
+    </div>
+
+    <footer id="contact" class="main-footer">
+        <p>&copy; 2025 Lorena Coronado | Web Application Developer</p>
+        <div class="social-links">
+            <a href="https://www.linkedin.com/in/lorena-coronado" target="_blank">LinkedIn</a>
+            <a href="https://github.com/lorenacoronado" target="_blank">GitHub</a>
+        </div>
+    </footer>
+
+</body>
+
+</html>

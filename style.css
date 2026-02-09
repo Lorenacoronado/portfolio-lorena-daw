@@ -1,0 +1,389 @@
+/* =========================================== */
+/* 1. REGLAS PARA TODA LA WEB */
+/* =========================================== */
+
+/* Colores Clave */
+/* #00bcd4: Turquesa Vivo (Principal) */
+/* #1f2937: Azul Oscuro (Fondos) */
+/* #f9fafb: Blanco/Gris Claro (Fondo y Letra Clara) */
+
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box; /* Regla esencial para el diseño */
+}
+
+body {
+    font-family: 'Roboto', sans-serif;
+    line-height: 1.6;
+    color: #374151; /* Gris Oscuro para Texto */
+    background-color: #f9fafb; /* Fondo General de la página */
+}
+
+/* Estilos de Enlaces */
+a {
+    text-decoration: none; 
+    color: #00bcd4; /* Turquesa Vivo */
+}
+
+ul {
+    list-style: none;
+}
+
+/* Regla para centrar el contenido principal y limitar el ancho */
+.content-wrapper {
+    max-width: 1100px; /* Ancho máximo para todo el contenido */
+    margin: 0 auto;    /* Centrar en la pantalla */
+}
+
+/* Alineación de utilidad para centrar texto */
+.text-center {
+    text-align: center !important; 
+}
+
+
+/* =========================================== */
+/* 2. BARRA DE NAVEGACIÓN Y HEADER */
+/* =========================================== */
+
+/* Contenedor principal del encabezado (Menú e Iconos) */
+.main-header {
+    background: #1f2937; /* Fondo Azul Oscuro */
+    color: #f9fafb; /* Letra Blanca */
+    padding: 1rem 2%; 
+    display: flex;
+    justify-content: space-between; /* Iconos a la izq, Menú a la dcha */
+    align-items: center;
+    position: sticky; /* Fija la barra arriba */
+    top: 0;
+    z-index: 1000;
+    box-shadow: 0 2px 5px rgba(0, 0, 0, 0.2);
+}
+
+/* Iconos de Programación (barra superior) */
+.header-icons {
+    display: flex; 
+    gap: 10px; 
+    font-size: 1.5rem; 
+    color: #00bcd4; /* Turquesa Vivo */
+}
+
+/* Menú de navegación */
+.main-nav ul {
+    display: flex;
+    gap: 20px;
+}
+
+/* Enlaces del menú */
+.main-nav a {
+    color: #f9fafb; /* Letra Blanca */
+    font-weight: 400;
+    transition: color 0.3s;
+}
+
+/* Efecto hover en enlaces del menú */
+.main-nav a:hover {
+    color: #00bcd4; /* Efecto Turquesa al pasar el ratón */
+}
+
+/* Estilos para el BOTÓN DE IDIOMA */
+#language-switcher {
+    margin-left: 25px; 
+}
+
+/* Botón de idioma individual */
+#language-switcher a {
+    color: #00bcd4 !important; /* Turquesa Vivo */
+    border: 1px solid #00bcd4; 
+    padding: 5px 10px;
+    border-radius: 5px;
+    font-weight: 700;
+    font-size: 0.9rem;
+}
+
+/* Efecto hover en el botón de IDIOMA */
+#language-switcher a:hover {
+    background-color: #00bcd4; 
+    color: #1f2937 !important; /* Letra Azul Oscuro */
+}
+
+
+/* =========================================== */
+/* 3. SECCIÓN PRINCIPAL E IMAGEN (HERO) */
+/* =========================================== */
+
+.hero-section {
+    background: #1f2937; /* Fondo Azul Oscuro */
+    color: #f9fafb; /* Letra Blanca */
+    padding: 20px 5%; 
+    min-height: 400px; 
+    display: flex; /* Usamos Flexbox */
+    align-items: center;
+    justify-content: space-around; 
+    width: 100%; 
+    gap: 40px;
+    border-radius: 10px; /* Esquinas redondeadas */
+    margin-bottom: 20px; 
+}
+
+/* Lado izquierdo de la bienvenida (texto) */
+.hero-content {
+    max-width: 50%; 
+    text-align: left; 
+}
+
+/* LORENA CORONADO (h2): */
+.hero-content h2 {
+    font-size: 2.2rem; 
+    color: #f9fafb; 
+    font-family: 'Poppins', serif; 
+    font-weight: 600; 
+    
+    margin-bottom: 25px; /* Espaciado para separar del h1 */
+    padding-bottom: 5px;
+    border-bottom: 2px solid #00bcd4; /* Linea turquesa */
+    display: inline-block; /* Para que la línea solo cubra el ancho del texto */
+}
+
+/* TITULO PRINCIPAL (h1) */
+.hero-content h1 {
+    font-size: 3rem; 
+    margin-bottom: 20px;
+    font-weight: 700;
+    color: #00bcd4; 
+    text-align: left;
+    line-height: 1.1; 
+}
+
+/* Frase secundaria bajo el título */
+.hero-content p {
+    color: #f9fafb; 
+    font-size: 1.4rem; 
+    margin-bottom: 30px;
+    text-align: left;
+}
+
+/* Botón "Ver Proyectos" */
+.cta-button {
+    display: inline-block;
+    background-color: #00bcd4; /* Fondo Turquesa Vivo */
+    color: #1f2937 !important; /* Letra Azul Oscuro */
+    padding: 12px 25px;
+    border-radius: 5px;
+    font-weight: 700;
+    border: none; 
+    cursor: pointer; 
+}
+
+
+/* Imagen y Botones Sociales */
+.hero-image-container {
+    max-width: 300px; /* Ancho máximo */
+    flex-shrink: 0;
+    text-align: center; 
+}
+
+/* Estilo de la imagen principal */
+.hero-image-container img { /* Hace la imagen responsive */
+    max-width: 100%;
+    height: auto; /* Evita que la imagen se estire */
+    border-radius: 8px;
+}
+
+/* Botones Sociales (GitHub/LinkedIn) bajo la imagen */
+.hero-social-links {
+    margin-top: 20px; 
+    display: flex; 
+    justify-content: center; 
+    gap: 15px; 
+}
+
+/* Enlaces sociales individuales */
+.hero-social-links a {
+    display: flex; 
+    align-items: center;
+    gap: 8px; 
+    background-color: #00838f; 
+    color: #f9fafb !important; 
+    padding: 8px 15px;
+    border-radius: 5px;
+    font-weight: 600;
+    font-size: 1rem;
+}
+
+
+/* =========================================== */
+/* 4. SECCIONES DE CONTENIDO Y PROYECTOS */
+/* =========================================== */
+
+section {
+    padding: 60px 5%;
+    width: 100%; 
+    margin: 0 auto;
+}
+
+/* ACERCA DE MÍ (La caja de contenido) */
+.about-section {
+    background-color: #f9fafb; 
+    border-radius: 10px; 
+    box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1); 
+    margin-bottom: 40px; 
+    padding: 40px 5% 15px 5%;
+    display: block;
+    overflow: hidden;
+}
+
+/* Párrafos Justificados dentro de Acerca de Mí */
+.about-section p {
+    font-size: 1.1rem;
+    text-align: justify; 
+    margin-bottom: 15px;
+}
+
+/* CONTENEDOR FRASE EN ACERCA DE MÍ */
+.dev-quote-container {
+    margin-top: 60px; 
+    margin-bottom: 40px; 
+    margin-left: auto;
+    margin-right: auto;
+    max-width: 1000px; 
+    padding: 30px; 
+    background-color: #1f2937; 
+    border-radius: 8px;
+    text-align: center;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2);
+}
+
+/* Texto decorativo del comentario en la frase (/* Y recuerda... */
+.dev-quote-preface {
+    font-family: 'Courier New', Courier, monospace; 
+    display: block;
+    font-size: 0.9em; 
+    font-weight: bold;
+    color: #cfd8e9; 
+    margin-bottom: 10px;
+    text-align: center; 
+}
+
+/* Estilo de la frase "Y recuerda..." */
+.dev-quote-container blockquote {
+    font-family: 'Courier New', Courier, monospace; 
+    font-size: 1.2em; 
+    font-weight: bold;
+    color: #00bcd4; 
+    font-style: italic;
+    margin: 0;
+    text-align: center; 
+}
+
+
+/* MIS PROYECTOS */
+/* Fondo de la sección de proyectos */
+.projects-section {
+    background-color: #e5e7eb; 
+    border-radius: 10px; 
+    box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1); 
+    margin-bottom: 40px; 
+}
+
+/* Cuadrícula para organizar las tarjetas de proyecto */
+.projects-grid {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(300px, 1fr)); 
+    gap: 30px;
+}
+
+/* Tarjetas de Proyecto Individuales */
+.project-card {
+    background: white;
+    padding: 25px;
+    border-radius: 8px;
+    box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1); 
+}
+
+/* Párrafo dentro de la tarjeta de proyecto */
+.project-card p {
+    margin-bottom: 5px; /* Reducir el margen inferior del párrafo */
+}
+
+/* Enlace "Ver Código" */
+.project-card .project-link {
+    margin-top: 15px; /* Añade espacio arriba para separarlo del texto */
+    display: inline-block; /* Asegura que el margen funcione correctamente */
+    font-weight: 700;
+}
+
+/* Efecto gris en "Próximamente" */
+.coming-soon {
+    opacity: 0.5; /* Hace que la tarjeta se vea más transparente/grisácea */
+    cursor: default;
+}
+
+
+/* =========================================== */
+/* 5. PIE DE PÁGINA Y RESPONSIVE */
+/* =========================================== */
+
+/* Bloque del pie de página */
+.main-footer {
+    background: #1f2937; 
+    color: #f9fafb; 
+    text-align: center;
+    padding: 20px 5%;
+}
+
+/* Enlaces del Pie de Página (LinkedIn/GitHub) */
+.social-links a {
+    color: #00bcd4; 
+    margin: 0 10px;
+    font-weight: 700;
+    text-decoration: none; 
+    transition: color 0.3s;
+}
+
+/* Efecto hover en enlaces del footer */
+.social-links a:hover {
+    color: #f9fafb; 
+}
+
+/* Contenedor de enlaces sociales en el footer */
+.social-links {
+    margin-top: 10px;
+}
+
+
+/* Media Queries: Diseño adaptable para Móviles */
+@media (max-width: 850px) {
+    
+    /* Apila el contenido del Hero en columna en pantallas pequeñas */
+    .hero-section {
+        flex-direction: column; 
+        text-align: center;
+    }
+    
+       /* Centra el texto del Hero en móvil */
+    .hero-content {
+        text-align: center; 
+        max-width: 100%;
+    }
+
+    /* Ocultar la barra de iconos de lenguajes en móvil */
+    .header-icons {
+        display: none;
+    }
+}
+
+/* ===================================================  */
+/* 6. EFECTO FLOTANTE PARA LOS BOTONES DE ARRIBA */
+/* =================================================== */
+
+/* Seleccionamos el botón de Proyectos y los sociales de LinkedIn/GitHub */
+.cta-button, .hero-social-links a {
+    transition: transform 0.3s ease, box-shadow 0.3s ease, background-color 0.3s ease !important;
+}
+
+/* Aplicamos el efecto cuando el ratón pasa por encima (hover) */
+.cta-button:hover, .hero-social-links a:hover {
+    transform: translateY(-5px) !important; /* Salto hacia arriba */
+    box-shadow: 0 10px 20px rgba(0, 0, 0, 0.3) !important; /* Sombra de elevación */
+}
