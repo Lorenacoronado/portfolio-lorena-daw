@@ -233,19 +233,113 @@
         @media (max-width: 768px) {
             .premium-card {
                 grid-template-columns: 1fr; /* Pone una columna sobre otra */
+                margin-top: 20px; 
+                border-radius: 40px;
+                width: 95%; /* <--- Ajustado para que no se pegue a los bordes del móvil */
+                margin-left: auto;
+                margin-right: auto;
+                overflow: hidden; /* Esto hace que la imagen no se salga por los lados y respete las esquinas redondas */
+                display: flex; /* Cambiamos a flex para controlar mejor el orden del link de volver */
+                flex-direction: column;
+                
             }
 
+            .card-info-side {
+                padding: 20px; /* Reducimos el padding para que todo suba */
+                order: 2;
+                position: relative;
+
+            }
+
+            /* Título ¿Hablamos? */
             .contact-title {
-                font-size: 2.5rem; /* Título más pequeño en móviles */
+                font-size: 1.8rem; /* Título más pequeño en móviles */
+                margin-top: 45px;
+                text-align: center;
+                   
+
             }
 
             .btn-main-contact {
                 width: 100%; /* En móvil el botón sí ocupa todo el ancho */
+                
             }
 
+            /* Botón "Volver al portfolio" */
             .back-link {
-                top: -35px;
-                right: 20px;
+                position: relative; /* Cambia a relativo para ir al final del flujo */
+                top: 0;
+                left: 20px;
+                margin-top: 5px; /* Espacio después de los botones */
+                margin-bottom: 20px;
+                align-self: flex-start; /* Alineado a la izquierda */
+                font-size: 0.95rem;
+                order: 3; /* Va al final del todo */
+            }
+
+            /* Botón "Disponible para trabajar" */
+            .badge-status {
+                position: absolute; /* <--- Esto lo saca del centro sí o sí */
+                top: 15px;      /* <--- Ajusta la altura respecto a la imagen */
+                right: 15px;    /* <--- Lo pega a la derecha */
+                display: flex; 
+                align-items: center; 
+                justify-content: center;
+                gap: 8px;
+                font-size: 0.75rem;
+                padding: 6px 12px;
+                z-index: 20;    /* Para que siempre esté por encima */
+                margin: 0;      /* <--- se elimina cualquier margen que lo centre */
+            }
+
+            /* Parte Imagen */
+            .card-image-side {
+                padding: 0px; /* Menos padding lateral */
+                width: 100%;
+                order: 1;
+            }
+
+            .card-image-side img {
+                width: 100%; /* La imagen ocupa el ancho de su contenedor */
+                height: auto;
+                display: block; /* Quita espacios blancos debajo de la imagen */
+                border-radius: 0; /* El redondeado lo hereda del contenedor padre */
+                
+            }
+
+            /* Texto Justificado */
+            .card-info-side p {
+                text-align: justify; /* Mantenemos el estilo recto que te gustó */
+                font-size: 0.85rem;
+
+            }
+
+             /* Botones de CV */
+            .cv-grid-downloads {
+                display: grid;
+                grid-template-columns: 1fr 1fr; /* Mantiene las dos columnas */
+                gap: 12px;
+                width: 100%;
+                margin-top: 10px;
+
+            }
+
+            .btn-cv-download {
+                display: flex; /* Activa el modo flexible */
+                flex-direction: row; /* <--- Asegura que el icono esté al lado del texto */
+                align-items: center; /* Alinea icono y texto verticalmente */
+                justify-content: center; /* Los centra en el botón */
+                gap: 8px; /* Espacio pequeño entre icono y texto */
+                padding: 12px 5px; /* Padding reducido a los lados */
+                font-size: 0.95rem; /* Letra un poco más pequeña para que quepa todo recto */
+                font-weight: 700;
+                white-space: nowrap; /* Impide que el texto salte de línea */
+            
+            }
+
+            .btn-cv-download i {
+                font-size: 1.1rem; /* Icono un poco más pequeño */
+
             }
         }
     </style>
