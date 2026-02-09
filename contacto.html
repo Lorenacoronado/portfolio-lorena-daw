@@ -280,24 +280,60 @@
             ============================================================ */
         @media (max-width: 768px) {
             .premium-card {
-                grid-template-columns: 1fr;
-                /* Pone una columna sobre otra */
+                grid-template-columns: 1fr; /* Pone una columna sobre otra */
+                margin-top: 60px; /* <--- ESPACIO EXTRA para que se vea el botón "Volver" */
+                border-radius: 30px;
+                
             }
 
+            .card-info-side {
+            padding: 40px 25px; /* Ajustamos el aire interno */
+            align-items: center; /* Centramos el contenido */
+
+            }
+
+            /* Título ¿Hablamos? */
             .contact-title {
-                font-size: 2.5rem;
-                /* Título más pequeño en móviles */
+            font-size: 2rem; /* Título más pequeño en móviles */
+            text-align: center;
+            margin-top: 10px;   
+
             }
 
             .btn-main-contact {
-                width: 100%;
-                /* En móvil el botón sí ocupa todo el ancho */
+                width: 100%; /* En móvil el botón sí ocupa todo el ancho */
+                
             }
 
+            /* Botón "Volver al portfolio" */
             .back-link {
-                top: -35px;
-                right: 20px;
+                top: -45px;
+                right: 50px;
+                transform: translateX(50%); /* Lo centramos horizontalmente */
+                white-space: nowrap;
             }
+
+            /* Botón "Disponible para trabajar" */
+            .badge-status {
+            position: relative; /* <--- CAMBIO CLAVE: Deja de flotar sobre el título */
+            top: 0;
+            right: 0;
+            margin-bottom: 15px; /* Separa el badge del título */
+            align-self: center;
+
+            }
+
+            /* Texto Justificado */
+            .card-info-side p {
+            text-align: justify; /* Mantenemos el estilo recto que te gustó */
+            font-size: 0.85rem;
+            }
+
+             /* Botones de CV */
+            .cv-grid-downloads {
+             grid-template-columns: 1fr; /* Uno debajo del otro en móviles muy estrechos */
+            width: 100%;
+             }
         }
     </style>
 </head>
