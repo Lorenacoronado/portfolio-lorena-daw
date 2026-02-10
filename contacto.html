@@ -326,7 +326,7 @@
             .btn-cv-download i {
                 font-size: 1.1rem; /* Icono un poco más pequeño */
             }
-        } /* <--- Cierre del bloque Vertical corregido */
+        } 
 
         /* ============================================================
             RESPONSIVE (Para móviles HORIZONTAL)
@@ -368,14 +368,17 @@
 
             /* BOTÓN Volver al Portfolio */
             .back-link {
-                position: absolute !important;
-                bottom: 12px !important;       /* <--- Ni 4px ni 0, 12px para que se vea bien */
-                right: 35px !important;        /* Lo alineamos bajo el CV Inglés */
-                top: auto !important;
-                left: auto !important;
-                display: flex !important;      /* Lo forzamos a existir */
-                z-index: 999 !important;       /* Lo ponemos por encima de TODO */
-                margin: 0 !important;
+                position: absolute;
+                bottom: -50px;     
+                right: 35px;       
+                top: auto;
+                left: auto;
+                margin: 0;
+                display: flex;      
+                z-index: 999;       
+                background: none;
+                box-shadow: none;
+
             }
 
             /* Lado Izquierdo IMAGEN */
