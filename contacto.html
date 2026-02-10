@@ -16,15 +16,11 @@
             FONDO Y CONTENEDOR PRINCIPAL
             ============================================================ */
         .contact-page-wrapper {
-            min-height: 100vh;
-            /* Ocupa todo el alto de la pantalla */
-            display: flex;
-            align-items: center;
-            /* Centra la tarjeta verticalmente */
-            justify-content: center;
-            /* Centra la tarjeta horizontalmente */
-            background: linear-gradient(135deg, #f5f7fa 0%, #d6eef1 100%);
-            /* Fondo degradado */
+            min-height: 100vh; /* Ocupa todo el alto de la pantalla */
+            display: flex; /* Activa el modo flexible */
+            align-items: center; /* Centra la tarjeta verticalmente */
+            justify-content: center; /* Centra la tarjeta horizontalmente */
+            background: linear-gradient(135deg, #f5f7fa 0%, #d6eef1 100%); /* Fondo degradado */
             padding: 20px;
         }
 
@@ -33,46 +29,33 @@
             ============================================================ */
         .premium-card {
             position: relative;
-            max-width: 1150px;
-            /* <--- REDUCIDO: Antes 1400px para que sea más pequeña */
-            min-height: 500px;
-            /* <--- AJUSTADO: Antes 520px para encoger el contenedor */
-            background: rgba(255, 255, 255, 0.95);
-            /* Color blanco con ligera transparencia */
-            border-radius: 40px;
-            /* Esquinas redondeadas */
-            display: grid;
-            grid-template-columns: 1fr 1.1fr;
-            /* Divide la tarjeta en dos columnas */
-            /* IMPORTANTE: Quitamos overflow:hidden para que el enlace de arriba NO se corte */
-            box-shadow: 0 30px 60px rgba(0, 0, 0, 0.12);
-            /* Sombra elegante */
+            max-width: 1150px; /* <--- REDUCIDO: Antes 1400px para que sea más pequeña */
+            min-height: 500px; /* <--- AJUSTADO: Antes 520px para encoger el contenedor */
+            background: rgba(255, 255, 255, 0.95); /* Color blanco con ligera transparencia */
+            border-radius: 40px; /* Esquinas redondeadas */
+            display: grid; /* Divide la tarjeta en rejilla */
+            grid-template-columns: 1fr 1.1fr; /* Divide la tarjeta en dos columnas */
+            box-shadow: 0 30px 60px rgba(0, 0, 0, 0.12); /* Sombra elegante */
         }
 
         /* ============================================================
             LADO IZQUIERDO: LA IMAGEN 
             ============================================================ */
         .card-image-side {
-            background-color: #179fb1;
-            /* Color de fondo debajo de la imagen */
-            padding: 35px;
-            /* <--- AJUSTADO: Menos aire para que la imagen luzca más */
+            background-color: #179fb1; /* Color de fondo debajo de la imagen */
+            padding: 35px; /* <--- AJUSTADO: Menos aire para que la imagen luzca más */
             display: flex;
             align-items: center;
             justify-content: center;
-            border-top-left-radius: 40px;
-            /* Redondeamos manualmente al quitar el overflow */
+            border-top-left-radius: 40px; /* Redondeamos manualmente al quitar el overflow */
             border-bottom-left-radius: 40px;
         }
 
         .card-image-side img {
-            width: 100%;
-            /* La imagen se adapta al ancho de su columna */
-            max-width: 480px;
-            /* Imagen más grande */
+            width: 100%; /* La imagen se adapta al ancho de su columna */
+            max-width: 480px; /* Imagen más grande */
             border-radius: 20px;
-            box-shadow: 0 0 40px 10px rgba(255, 255, 255, 1);
-            /* Brillo suave */
+            box-shadow: 0 0 40px 10px rgba(255, 255, 255, 1); /* Brillo suave */
             transition: 0.4s ease;
         }
 
@@ -80,41 +63,28 @@
             LADO DERECHO: INFORMACIÓN
             ============================================================ */
         .card-info-side {
-            padding: 30px 60px;
-            /* Espaciado interno: 30px arriba/abajo y 60px izquierda/derecha */
-            display: flex;
-            /* Activa el modo "imán" para organizar los elementos fácilmente */
-            flex-direction: column;
-            /* Alinea los elementos uno debajo de otro */
-            justify-content: center;
-            /* Centra todo el contenido verticalmente dentro de la columna */
-            position: relative;
-            /* Convierte esta caja en un "ancla" */
+            padding: 30px 60px; /* Espaciado interno: 30px arriba/abajo y 60px izquierda/derecha */
+            display: flex; /* Activa el modo "imán" para organizar los elementos fácilmente */
+            flex-direction: column; /* Alinea los elementos uno debajo de otro */
+            justify-content: center; /* Centra todo el contenido verticalmente dentro de la columna */
+            position: relative; /* Convierte esta caja en un "ancla" */
         }
 
         /* Botón "DISPONIBLE PARA TRABAJAR" */
         .badge-status {
-            position: absolute;
-            /* <--- Clave para moverlo libremente */
-            top: 45px;
-            /* <--- AJUSTADO para el nuevo tamaño de caja */
-            right: 60px;
-            /* <--- Alineación con el margen derecho del padding */
+            position: absolute; /* <--- Clave para moverlo libremente */
+            top: 45px; /* <--- AJUSTADO para el nuevo tamaño de caja */
+            right: 60px; /* <--- Alineación con el margen derecho del padding */
             display: inline-flex;
             align-items: center;
             gap: 6px;
-            background: #d2f6dc;
-            /* Fondo verde claro */
-            color: #1a5c37;
-            /* Texto verde oscuro */
-            padding: 4px 15px;
-            /* Tamaño de la cápsula */
+            background: #d2f6dc; /* Fondo verde claro */
+            color: #1a5c37; /* Texto verde oscuro */
+            padding: 4px 15px; /* Tamaño de la cápsula */
             border-radius: 50px;
-            font-size: 0.80rem;
-            /* Tamaño de letra */
+            font-size: 0.80rem; /* Tamaño de letra */
             font-weight: 700;
-            width: fit-content;
-            /* Se ajusta al texto */
+            width: fit-content; /* Se ajusta al texto */
             border: 1px solid #1a5c37;
         }
 
@@ -122,18 +92,14 @@
         .contact-title {
             margin-top: 15px;
             font-size: 1.8rem;
-            font-weight: 700;
-            /* Máximo grosor de Poppins */
+            font-weight: 700; /* Máximo grosor de Poppins */
             color: #333;
-            margin-bottom: 8px;
-            /* Bajar o subir el titulo */
+            margin-bottom: 8px; /* Bajar o subir el titulo */
             line-height: 1.2;
             padding-bottom: 4px;
-            background: linear-gradient(90deg, #333 0%, #00bcd4 100%);
-            /* Efecto degradado opcional */
+            background: linear-gradient(90deg, #333 0%, #00bcd4 100%); /* Efecto degradado opcional */
             -webkit-background-clip: text;
-            background-clip: text;
-            /* <--- Añadida línea de compatibilidad */
+            background-clip: text; /* <--- Añadida línea de compatibilidad */
             -webkit-text-fill-color: transparent;
             color: transparent;
         }
@@ -164,18 +130,12 @@
 
         /* Contenedor que separa el bloque de botones del texto superior */
         .actions-wrapper {
-            margin-top: 25px;
-            /* <--- AUMENTADO: Antes 20px para bajar los botones */
+            margin-top: 25px; /* <--- AUMENTADO: Antes 20px para bajar los botones */
             display: flex;
             flex-direction: column;
             gap: 20px;
-            padding-bottom: 10px;
-            /* <--- AÑADIDO: Aire extra por abajo */
+            padding-bottom: 10px; /* <--- AÑADIDO: Aire extra por abajo */
         }
-
-        /* ============================================================
-            ESTILOS DE LOS BOTONES
-            ============================================================ */
 
         /* Botón de ENVIAR CORREO */
         .btn-main-contact {
@@ -193,9 +153,8 @@
             justify-content: center;
             gap: 10px;
             white-space: nowrap; /* Evita que el texto se rompa */
-            width: 100%;  /* Ocupa todo el ancho disponible */
+            width: 100%; /* Ocupa todo el ancho disponible */
             box-sizing: border-box; /* Asegura que el padding no lo ensanche más de la cuenta */
-            
         }
 
         /* Botones de CV (uno al lado del otro) */
@@ -224,36 +183,27 @@
 
         /* Iconos PDF de los botones de CURRICULUM */
         .btn-cv-download i {
-            font-size: 1.2rem;
-            /* Ajusta el tamaño */
+            font-size: 1.2rem; /* Ajusta el tamaño */
             vertical-align: middle;
         }
 
-        /* ============================================================
-            EFECTOS HOVER (Al pasar el ratón)
-            ============================================================ */
+        /* EFECTOS HOVER */
         .btn-main-contact:hover {
-            transform: translateY(-3px);
-            /* Sube un poco */
-            background: #00acc1;
-            /* Oscurece un poco el color */
-            box-shadow: 0 10px 20px rgba(0, 188, 212, 0.2);
-            /* Sombra turquesa */
+            transform: translateY(-3px); /* Sube un poco */
+            background: #00acc1; /* Oscurece un poco el color */
+            box-shadow: 0 10px 20px rgba(0, 188, 212, 0.2); /* Sombra turquesa */
         }
 
         .btn-cv-download:hover {
-            background-color: #f0fdfe;
-            /* Aparece un fondo muy claro */
+            background-color: #f0fdfe; /* Aparece un fondo muy claro */
             transform: translateY(-2px);
         }
 
         /* Enlace de "Volver al portfolio" */
         .back-link {
             position: absolute;
-            top: -45px;
-            /* Lo sube a arriba */
-            right: 40px;
-            /* izquierda o derecha */
+            top: -45px; /* Lo sube a arriba */
+            right: 40px; /* izquierda o derecha */
             display: inline-flex;
             align-items: center;
             gap: 8px;
@@ -262,22 +212,18 @@
             font-size: 1rem;
             font-weight: 600;
             transition: 0.3s;
-            z-index: 10;
-            /* Asegura que no quede tapado */
-        }
-
-        .back-link:hover {
-            color: #00bcd4;
-            transform: translateY(-3px);
+            z-index: 10; /* Asegura que no quede tapado */
         }
 
         /* ============================================================
-            RESPONSIVE (Para móviles)
+            RESPONSIVE (Para móviles VERTICAL)
             ============================================================ */
         @media (max-width: 768px) {
+
+            /* Tarjeta Principal */
             .premium-card {
                 grid-template-columns: 1fr; /* Pone una columna sobre otra */
-                margin-top: 20px; 
+                margin-top: 20px;
                 border-radius: 40px;
                 width: 95%; /* <--- Ajustado para que no se pegue a los bordes del móvil */
                 margin-left: auto;
@@ -285,31 +231,28 @@
                 overflow: hidden; /* Esto hace que la imagen no se salga por los lados y respete las esquinas redondas */
                 display: flex; /* Cambiamos a flex para controlar mejor el orden del link de volver */
                 flex-direction: column;
-                
             }
 
+            /* LADO DERECHO: INFORMACIÓN */
             .card-info-side {
                 padding: 20px; /* Reducimos el padding para que todo suba */
                 order: 2;
                 position: relative;
-
             }
 
-            /* Título ¿Hablamos? */
+            /* Título "¿Hablamos?" */
             .contact-title {
                 font-size: 1.8rem; /* Título más pequeño en móviles */
                 margin-top: 45px;
                 text-align: center;
-                   
-
             }
 
+            /* Botón de ENVIAR CORREO */
             .btn-main-contact {
                 width: 100%; /* En móvil el botón sí ocupa todo el ancho */
-                
             }
 
-            /* Botón "Volver al portfolio" */
+            /* Enlace de "VOLVER AL PORTFOLIO" */
             .back-link {
                 position: relative; /* Cambia a relativo para ir al final del flujo */
                 top: 0;
@@ -321,71 +264,142 @@
                 order: 3; /* Va al final del todo */
             }
 
-            /* Botón "Disponible para trabajar" */
+            /* Botón "DISPONIBLE PARA TRABAJAR" */
             .badge-status {
                 position: absolute; /* <--- Esto lo saca del centro sí o sí */
-                top: 15px;      /* <--- Ajusta la altura respecto a la imagen */
-                right: 15px;    /* <--- Lo pega a la derecha */
-                display: flex; 
-                align-items: center; 
+                top: 15px; /* <--- Ajusta la altura respecto a la imagen */
+                right: 15px; /* <--- Lo pega a la derecha */
+                display: flex;
+                align-items: center;
                 justify-content: center;
                 gap: 8px;
                 font-size: 0.75rem;
                 padding: 6px 12px;
-                z-index: 20;    /* Para que siempre esté por encima */
-                margin: 0;      /* <--- se elimina cualquier margen que lo centre */
+                z-index: 20; /* Para que siempre esté por encima */
+                margin: 0; /* <--- se elimina cualquier margen que lo centre */
             }
 
-            /* Parte Imagen */
+            /* LADO IZQUIERDO: LA IMAGEN */
             .card-image-side {
                 padding: 0px; /* Menos padding lateral */
                 width: 100%;
                 order: 1;
             }
 
+            /* Imagen del perfil */
             .card-image-side img {
                 width: 100%; /* La imagen ocupa el ancho de su contenedor */
                 height: auto;
                 display: block; /* Quita espacios blancos debajo de la imagen */
                 border-radius: 0; /* El redondeado lo hereda del contenedor padre */
-                
             }
 
-            /* Texto Justificado */
+            /* Texto de Información */
             .card-info-side p {
-                text-align: justify; /* Mantenemos el estilo recto que te gustó */
+                text-align: justify; /* Mantenemos el estilo recto */
                 font-size: 0.85rem;
-
             }
 
-             /* Botones de CV */
+            /* Contenedor de botones de CV */
             .cv-grid-downloads {
                 display: grid;
                 grid-template-columns: 1fr 1fr; /* Mantiene las dos columnas */
                 gap: 12px;
                 width: 100%;
                 margin-top: 10px;
-
             }
 
+            /* Botones de CURRICULUM */
             .btn-cv-download {
-                display: flex; /* Activa el modo flexible */
+                display: flex;
                 flex-direction: row; /* <--- Asegura que el icono esté al lado del texto */
-                align-items: center; /* Alinea icono y texto verticalmente */
-                justify-content: center; /* Los centra en el botón */
-                gap: 8px; /* Espacio pequeño entre icono y texto */
+                align-items: center;
+                justify-content: center;
+                gap: 8px;
                 padding: 12px 5px; /* Padding reducido a los lados */
-                font-size: 0.95rem; /* Letra un poco más pequeña para que quepa todo recto */
+                font-size: 0.95rem; /* Letra un poco más pequeña */
                 font-weight: 700;
                 white-space: nowrap; /* Impide que el texto salte de línea */
-            
             }
 
+            /* Iconos PDF de los botones de CV */
             .btn-cv-download i {
                 font-size: 1.1rem; /* Icono un poco más pequeño */
+            }
+        } /* <--- Cierre del bloque Vertical corregido */
+
+        /* ============================================================
+            RESPONSIVE (Para móviles HORIZONTAL)
+           ============================================================ */
+        @media (max-width: 900px) and (orientation: landscape) {
+
+            /* LA TARJETA EN HORIZONTAL */
+            .premium-card {
+                grid-template-columns: 1fr 1.2fr; /* Dos columnas */
+                margin-top: 20px; /* Margen superior */
+                max-height: 85vh; /* Evita que se salga de la pantalla */
+                overflow-y: auto; /* Permite scroll interno */
+                display: grid; /* Forzamos rejilla para que la foto vaya al lado */
 
             }
-        }
+
+            /* LADO DERECHO: INFORMACIÓN */
+            .card-info-side {
+                padding: 20px 30px; /* Espaciado interno */
+                display: flex; /* Flexbox para ordenar elementos */
+                flex-direction: column; /* Columna vertical */
+            }
+
+
+            /* BOTÓN Disponible para trabajar */
+            .badge-status {
+                position: absolute; 
+                top: 15px; 
+                right: 20px;
+                margin: 0;
+            }
+
+            /* Título "¿Hablamos?" */
+            .contact-title {
+                margin-top: 30px; /* Espacio para el badge */
+                font-size: 1.5rem;
+                text-align: left; /* Alineado al texto en horizontal */
+            }
+
+            /* BOTÓN Volver al Portfolio */
+            .back-link {
+                position: absolute !important;
+                bottom: 12px !important;       /* <--- Ni 4px ni 0, 12px para que se vea bien */
+                right: 35px !important;        /* Lo alineamos bajo el CV Inglés */
+                top: auto !important;
+                left: auto !important;
+                display: flex !important;      /* Lo forzamos a existir */
+                z-index: 999 !important;       /* Lo ponemos por encima de TODO */
+                margin: 0 !important;
+            }
+
+            /* Lado Izquierdo IMAGEN */
+            .card-image-side {
+                height: 100%;
+                padding: 10px;
+            }
+
+            /* Imagen del perfil */
+            .card-image-side img {
+                width: 100% !important;
+                height: 100% !important;
+                object-fit: cover !important; /* <--- Esto es clave para que no se estire */
+                border-radius: 25px;
+            }
+
+            /* Subimos todo el bloque de botones para dejar espacio libre debajo */
+            .actions-wrapper {
+                margin-top: 0px;  /* Reducimos el margen superior para que suba */
+                margin-bottom: 55px; /* Creamos el hueco necesario para el link */
+                display: flex;
+                flex-direction: column;
+            }
+        } 
     </style>
 </head>
 
@@ -399,7 +413,10 @@
             </a>
 
             <div class="card-image-side">
-                <img src="assets/image/daw_lorena.png" alt="Lorena Coronado">
+                <picture>
+                    <source srcset="assets/image/daw_lorena_hz.png" media="(orientation: landscape)">
+                    <img src="assets/image/daw_lorena.png" alt="Lorena Coronado">
+                </picture>
             </div>
 
             <div class="card-info-side">
