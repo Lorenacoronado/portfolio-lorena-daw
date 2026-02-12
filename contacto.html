@@ -423,6 +423,7 @@
                 /* Permite scroll interno */
                 display: grid;
                 /* Forzamos rejilla para que la foto vaya al lado */
+                overflow: visible !important;
 
             }
 
@@ -455,18 +456,17 @@
             }
 
             /* BOTÓN Volver al Portfolio */
-            .back-link {
-                position: absolute;
-                bottom: -50px;
-                right: 35px;
-                top: auto; 
-                left: auto;
-                margin: 0;
-                display: flex;
-                z-index: 999;
-                background: none;
-                box-shadow: none;
-
+          .back-link {
+                position: absolute !important;
+                bottom: -50px !important; /* Lo posiciona debajo de los CV */
+                right: 35px !important;   /* Lo alinea a la derecha */
+                top: auto !important;     /* <--- VITAL: Anula el top de PC */
+                left: auto !important;
+                margin: 0 !important;
+                display: flex !important;      
+                z-index: 999 !important;       
+                background: none !important;
+                box-shadow: none !important;
             }
 
             /* Lado Izquierdo IMAGEN */
