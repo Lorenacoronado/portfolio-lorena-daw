@@ -29,14 +29,20 @@
             ============================================================ */
         .premium-card {
             position: relative;
-            max-width: 1150px; /* <--- REDUCIDO: Antes 1400px para que sea más pequeña */
-            min-height: 500px; /* <--- AJUSTADO: Antes 520px para encoger el contenedor */
-            background: rgba(255, 255, 255, 0.95); /* Color blanco con ligera transparencia */
-            border-radius: 40px; /* Esquinas redondeadas */
+            max-width: 1150px;
+            /* <--- REDUCIDO: Antes 1400px para que sea más pequeña */
+            min-height: 500px;
+            /* <--- AJUSTADO: Antes 520px para encoger el contenedor */
+            background: rgba(255, 255, 255, 0.95);
+            /* Color blanco con ligera transparencia */
+            border-radius: 40px;
+            /* Esquinas redondeadas */
             display: grid;
-            grid-template-columns: 1fr 1.1fr; /* Divide la tarjeta en dos columnas */
-            /* IMPORTANTE: Quitamos overflow:hidden para que el enlace de arriba NO se corte */
-            box-shadow: 0 30px 60px rgba(0, 0, 0, 0.12);  /* Sombra elegante */
+            /* Divide la tarjeta en rejilla */
+            grid-template-columns: 1fr 1.1fr !important;
+            /* Divide la tarjeta en dos columnas */
+            box-shadow: 0 30px 60px rgba(0, 0, 0, 0.12);
+            /* Sombra elegante */
         }
 
         /* ============================================================
@@ -208,18 +214,22 @@
 
         /* Enlace de "Volver al portfolio" */
         .back-link {
-            position: absolute;
-            top: -45px; /* Lo sube a arriba */
-            right: 40px; /* izquierda o derecha */
+            position: absolute !important;
+            top: -45px !important;
+            /* Lo sube a arriba */
+            right: 40px !important;
+            /* izquierda o derecha */
+            bottom: auto !important;
             display: inline-flex;
             align-items: center;
             gap: 8px;
             color: #635c5c;
             text-decoration: none;
             font-size: 1rem;
-            font-weight: 600; 
+            font-weight: 600;
             transition: 0.3s;
-            z-index: 10; /* Asegura que no quede tapado */
+            z-index: 10;
+            /* Asegura que no quede tapado */
         }
 
         .back-link:hover {
@@ -381,13 +391,13 @@
             /* BOTÓN Volver al Portfolio */
             .back-link {
                 position: absolute;
-                bottom: -50px;     
-                right: 35px;       
-                top: auto;
+                bottom: -50px;
+                right: 35px;
+                top: auto; 
                 left: auto;
                 margin: 0;
-                display: flex;      
-                z-index: 999;       
+                display: flex;
+                z-index: 999;
                 background: none;
                 box-shadow: none;
 
@@ -429,7 +439,9 @@
 
            <div class="card-image-side">
                 <picture>
-                    <source srcset="assets/image/daw_lorena_hz.png" media="(orientation: landscape)">
+                    <source srcset="assets/image/daw_lorena_hz.png"
+                        media="(max-width: 900px) and (orientation: landscape)">
+
                     <img src="assets/image/daw_lorena.png" alt="Lorena Coronado">
                 </picture>
             </div>
