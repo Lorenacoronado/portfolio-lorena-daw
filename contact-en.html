@@ -357,12 +357,12 @@
 
             /* LA TARJETA EN HORIZONTAL */
             .premium-card {
-                grid-template-columns: 1fr 1.2fr; /* Dos columnas */
+               grid-template-columns: 1fr 1.2fr; /* Dos columnas */
                 margin-top: 20px; /* Margen superior */
                 max-height: 85vh; /* Evita que se salga de la pantalla */
                 overflow-y: auto; /* Permite scroll interno */
+                overflow-x: auto !important;
                 display: grid; /* Forzamos rejilla para que la foto vaya al lado */
-
             }
 
             /* LADO DERECHO: INFORMACIÓN */
@@ -389,18 +389,17 @@
             }
 
             /* BOTÓN Volver al Portfolio */
-            .back-link {
-                position: absolute;
-                bottom: -50px;
-                right: 35px;
-                top: auto; 
-                left: auto;
-                margin: 0;
-                display: flex;
-                z-index: 999;
-                background: none;
-                box-shadow: none;
-
+              .back-link {
+                position: absolute !important;
+                bottom: -75px !important; 
+                right: 35px !important;   
+                top: auto !important;     
+                left: auto !important;
+                margin: 0 !important;
+                display: flex !important;      
+                z-index: 999 !important;       
+                background: none !important;
+                box-shadow: none !important;
             }
 
             /* Lado Izquierdo IMAGEN */
