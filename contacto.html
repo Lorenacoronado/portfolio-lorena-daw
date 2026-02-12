@@ -413,18 +413,12 @@
 
             /* LA TARJETA EN HORIZONTAL */
             .premium-card {
-                grid-template-columns: 1fr 1.2fr;
-                /* Dos columnas */
-                margin-top: 20px;
-                /* Margen superior */
-                max-height: 85vh;
-                /* Evita que se salga de la pantalla */
-                overflow-y: auto;
-                /* Permite scroll interno */
-                display: grid;
-                /* Forzamos rejilla para que la foto vaya al lado */
-                overflow: visible !important;
-
+               grid-template-columns: 1fr 1.2fr; /* Dos columnas */
+                margin-top: 20px; /* Margen superior */
+                max-height: 85vh; /* Evita que se salga de la pantalla */
+                overflow-y: auto; /* Permite scroll interno */
+                overflow-x: visible !important;
+                display: grid; /* Forzamos rejilla para que la foto vaya al lado */
             }
 
             /* LADO DERECHO: INFORMACIÓN */
@@ -458,9 +452,9 @@
             /* BOTÓN Volver al Portfolio */
           .back-link {
                 position: absolute !important;
-                bottom: -50px !important; /* Lo posiciona debajo de los CV */
-                right: 35px !important;   /* Lo alinea a la derecha */
-                top: auto !important;     /* <--- VITAL: Anula el top de PC */
+                bottom: -50px !important; 
+                right: 35px !important;   
+                top: auto !important;     
                 left: auto !important;
                 margin: 0 !important;
                 display: flex !important;      
