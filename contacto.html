@@ -273,33 +273,27 @@
 
             /* Tarjeta Principal */
             .premium-card {
-                grid-template-columns: 1fr;
-                /* Pone una columna sobre otra */
-                margin-top: 20px;
+                grid-template-columns: 1fr; /* Pone una columna sobre otra */
+                margin-top: 60px !important;
                 border-radius: 40px;
-                width: 95%;
-                /* <--- Ajustado para que no se pegue a los bordes del móvil */
+                width: 95%; /* Ajustado para que no se pegue a los bordes del móvil */
                 margin-left: auto;
                 margin-right: auto;
-                overflow: hidden;
-                /* Esto hace que la imagen no se salga por los lados y respete las esquinas redondas */
-                display: flex;
-                /* Cambiamos a flex para controlar mejor el orden del link de volver */
+                overflow: visible; /* Esto hace que la imagen no se salga por los lados y respete las esquinas redondas */
+                display: flex; /* Cambiamos a flex para controlar mejor el orden del link de volver */
                 flex-direction: column;
             }
 
             /* LADO DERECHO: INFORMACIÓN */
             .card-info-side {
-                padding: 20px;
-                /* Reducimos el padding para que todo suba */
+                padding: 20px; /* Reducimos el padding para que todo suba */
                 order: 2;
                 position: relative;
             }
 
             /* Título "¿Hablamos?" */
             .contact-title {
-                font-size: 1.8rem;
-                /* Título más pequeño en móviles */
+                font-size: 1.8rem; /* Título más pequeño en móviles */
                 margin-top: 45px;
                 text-align: center;
             }
@@ -313,10 +307,10 @@
             /* Enlace de "VOLVER AL PORTFOLIO" */
             .back-link {
                 position: absolute !important;
-                top: -40px !important;    /* Lo saca por encima de la foto, donde indicas */
-                left: 20px !important;    /* Alineado a la izquierda */
+                top: -45px !important;    /* Lo saca por encima de la foto, donde indicas */
+                right: 15px !important;    /* Alineado a la izquierda */
                 bottom: auto !important; 
-                right: auto !important;
+                left: auto !important;
                 display: flex !important;
                 z-index: 999;
                 color: #635c5c !important; /* Asegura que el color sea el correcto */
