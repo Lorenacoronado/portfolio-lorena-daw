@@ -245,12 +245,12 @@
             /* Tarjeta Principal */
             .premium-card {
                 grid-template-columns: 1fr; /* Pone una columna sobre otra */
-                margin-top: 20px;
+                margin-top: 60px !important;
                 border-radius: 40px;
-                width: 95%; /* <--- Ajustado para que no se pegue a los bordes del móvil */
+                width: 95%; /* Ajustado para que no se pegue a los bordes del móvil */
                 margin-left: auto;
                 margin-right: auto;
-                overflow: hidden; /* Esto hace que la imagen no se salga por los lados y respete las esquinas redondas */
+                overflow: visible; /* Esto hace que la imagen no se salga por los lados y respete las esquinas redondas */
                 display: flex; /* Cambiamos a flex para controlar mejor el orden del link de volver */
                 flex-direction: column;
             }
@@ -276,14 +276,14 @@
 
             /* Enlace de "VOLVER AL PORTFOLIO" */
             .back-link {
-                position: relative; /* Cambia a relativo para ir al final del flujo */
-                top: 0;
-                left: 20px;
-                margin-top: 5px; /* Espacio después de los botones */
-                margin-bottom: 20px;
-                align-self: flex-start; /* Alineado a la izquierda */
-                font-size: 0.95rem;
-                order: 3; /* Va al final del todo */
+                position: absolute !important;
+                top: -45px !important;    /* Lo saca por encima de la foto, donde indicas */
+                right: 15px !important;    /* Alineado a la izquierda */
+                bottom: auto !important; 
+                left: auto !important;
+                display: flex !important;
+                z-index: 999;
+                color: #635c5c !important; /* Asegura que el color sea el correcto */
             }
 
             /* Botón "DISPONIBLE PARA TRABAJAR" */
