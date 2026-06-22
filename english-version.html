@@ -23,21 +23,25 @@
         }
 
         .about-section ul li {
-            font-size: 1.05rem; /* Esto iguala el tamaño de los párrafos de arriba */
+            font-size: 1.05rem;
+            /* Esto iguala el tamaño de los párrafos de arriba */
             line-height: 1.6;
             margin-bottom: 12px;
             list-style: none;
         }
 
         .about-section ul li strong {
-            color: #179fb1; /* Esto pone las negritas en turquesa */
+            color: #179fb1;
+            /* Esto pone las negritas en turquesa */
         }
 
         /* Arregla el interlineado del texto que rodea la foto */
         .about-section p {
-            line-height: 1.8; /* Aumentamos del espacio entre líneas */
-            margin-bottom: 20px;  /* Espacio entre párrafos */
-           
+            line-height: 1.8;
+            /* Aumentamos del espacio entre líneas */
+            margin-bottom: 20px;
+            /* Espacio entre párrafos */
+
         }
     </style>
 </head>
@@ -140,25 +144,84 @@
                 </figure>
             </section>
 
-            <section id="projects" class="projects-section">
-                <h2>PROJECTS</h2>
+            <section id="projects" class="projects-section" style="padding: 40px 5%;">
+                <h2 style="margin-bottom: 20px; margin-top: 0;">PROJECTS</h2>
                 <div class="projects-grid">
+
                     <article class="project-card">
-                        <h3>01. Personal Web Portfolio</h3>
-                        <p>Developed using <strong>semantic HTML5</strong> and <strong>CSS3</strong>, focusing on
-                            <strong>Responsive Design</strong> and smooth interactivity.
-                        </p>
+                        <h3 style="margin-bottom: 15px; font-size: 1.1rem; display: inline-block; white-space: nowrap;">
+                            01. Personal Web Portfolio <i class="fas fa-laptop-code"
+                                style="margin-left: 6px; color: #1f2937;"></i>
+                        </h3>
+                        <p>Full development and layout of my digital cover letter, focused on resource optimization and
+                            performance.</p>
+                        <div class="project-tech-list" style="margin-top: 15px; line-height: 1.8;">
+                            <p style="margin: 3px 0;"><i class="fab fa-html5"></i> <strong>Semantic HTML5</strong></p>
+                            <p style="margin: 3px 0;"><i class="fab fa-css3-alt"></i> <strong>Advanced CSS3</strong></p>
+                            <p style="margin: 3px 0;"><i class="fas fa-th"></i> <strong>Flexbox & CSS Grid</strong></p>
+                            <p style="margin: 3px 0;"><i class="fas fa-mobile-alt"></i> <strong>Responsive
+                                    Design</strong></p>
+                        </div>
                         <a href="https://github.com/Lorenacoronado/portfolio-lorena-daw" target="_blank"
-                            class="project-link">View Code (GitHub)</a>
+                            class="project-link">
+                            <i class="fab fa-github"></i> View Code
+                        </a>
+                    </article>
+
+                    <article class="project-card">
+                        <h3 style="margin-bottom: 15px; font-size: 1.1rem; display: inline-block; white-space: nowrap;">
+                            02. SmartBite
+                            <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 512 512"
+                                style="width: 18px; height: 18px; fill: #1f2937; margin-left: 6px; display: inline-block; vertical-align: middle;">
+                                <path
+                                    d="M256 480c91.8 0 160-80 160-179.5 0-47.9-13.9-94.2-39.4-133.7C347.7 122 305.4 32 256 32S164.3 122 135.4 166.8C109.9 206.3 96 252.6 96 300.5 96 400 164.2 480 256 480zm0-40c-74.1 0-120-62.1-120-139.5 0-38.3 10.9-75.6 30.9-106.6C190.7 157 224.4 80 256 80s65.3 77 89.1 113.9c20 31 30.9 68.3 30.9 106.6 0 77.4-45.9 139.5-120 139.5zm0-104c35.3 0 64-28.7 64-64s-28.7-64-64-64-64 28.7-64 64 28.7 64 64 64zm0-32c-17.7 0-32-14.3-32-32s14.3-32 32-32 32 14.3 32 32-14.3 32-32 32z" />
+                            </svg>
+                        </h3>
+                        <p>Intelligent web application (SaaS) for healthy eating management, automated menus, and
+                            grocery list optimization.</p>
+                        <div class="project-tech-list" style="margin-top: 15px; line-height: 1.8;">
+                            <p style="margin: 3px 0;"><i class="fas fa-robot"></i> <strong>Nutri-AI Scanner
+                                    (PDF)</strong></p>
+                            <p style="margin: 3px 0;"><i class="fas fa-wallet"></i> <strong>Smart Budget Plan</strong>
+                            </p>
+                            <p style="margin: 3px 0;"><i class="fas fa-chart-pie"></i> <strong>Interactive Premium
+                                    Dashboard</strong></p>
+                            <p style="margin: 3px 0;"><i class="fas fa-cloud"></i> <strong>SaaS Architecture</strong>
+                            </p>
+                        </div>
+                        <a href="https://github.com/Lorenacoronado/smartbite" target="_blank" class="project-link">
+                            <i class="fab fa-github"></i> View Code
+                        </a>
+                    </article>
+
+                    <article class="project-card">
+                        <h3
+                            style="margin-bottom: 15px; font-size: 1.05rem; display: inline-block; white-space: nowrap;">
+                            03. Functional Photography Web <i class="fas fa-camera"
+                                style="margin-left: 6px; color: #1f2937;"></i>
+                        </h3>
+                        <p>Full-Stack platform designed for the optimization, internal management, and secure delivery
+                            of photography material to clients.</p>
+                        <div class="project-tech-list" style="margin-top: 15px; line-height: 1.8;">
+                            <p style="margin: 3px 0;"><i class="fab fa-react"></i> <strong>React (Vite) &
+                                    JavaScript</strong></p>
+                            <p style="margin: 3px 0;"><i class="fab fa-node-js"></i> <strong>Node.js & Express</strong>
+                            </p>
+                            <p style="margin: 3px 0;"><i class="fas fa-database"></i> <strong>Database (SQL)</strong>
+                            </p>
+                            <p style="margin: 3px 0;"><i class="fas fa-wind"></i> <strong>Tailwind CSS</strong></p>
+                        </div>
+                        <a href="https://github.com/Lorenacoronado/portfolio-fotografia-lorenacoronado" target="_blank"
+                            class="project-link">
+                            <i class="fab fa-github"></i> View Code
+                        </a>
                     </article>
 
                     <article class="project-card coming-soon">
-                        <h3>02. Project 2</h3>
-                        <p>Project under construction. (Coming soon...)</p>
-                    </article>
-
-                    <article class="project-card coming-soon">
-                        <h3>03. Project 3</h3>
+                        <h3 style="font-size: 1.1rem; display: inline-block; white-space: nowrap;">
+                            04. Project 4 <i class="fas fa-hourglass-start"
+                                style="margin-left: 6px; color: #1f2937;"></i>
+                        </h3>
                         <p>Project under construction. (Coming soon...)</p>
                     </article>
                 </div>
@@ -167,7 +230,7 @@
     </div>
 
     <footer id="contact" class="main-footer">
-        <p>&copy; 2025 Lorena Coronado | Web Application Developer</p>
+        <p>&copy; 2026 Lorena Coronado | Web Application Developer</p>
         <div class="social-links">
             <a href="https://www.linkedin.com/in/lorena-coronado" target="_blank">LinkedIn</a>
             <a href="https://github.com/lorenacoronado" target="_blank">GitHub</a>
